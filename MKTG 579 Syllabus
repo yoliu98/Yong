@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MKTG 579E: Marketing of Innovations</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+        }
+        
+        .slide-container {
+            display: none;
+            min-height: 100vh;
+            padding: 40px;
+            box-sizing: border-box;
+            position: relative;
+        }
+        
+        .slide-container.active {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .slide-content {
+            max-width: 900px;
+            width: 100%;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        h2 {
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: #ffffff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+        
+        .subtitle {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        .instructor-info {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .quote {
+            font-style: italic;
+            font-size: 1.1em;
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-left: 4px solid white;
+            text-align: left;
+        }
+        
+        .quote-author {
+            text-align: right;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        ul {
+            text-align: left;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        
+        li {
+            margin-bottom: 10px;
+            padding-left: 10px;
+        }
+        
+        .highlight-box {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .grade-breakdown {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            text-align: left;
+        }
+        
+        .grade-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+        }
+        
+        .warning {
+            background: rgba(255, 193, 7, 0.3);
+            border: 2px solid #ffc107;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        
+        .navigation {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .nav-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid white;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-btn:hover {
+            background: white;
+            color: #1e3c72;
+        }
+        
+        .slide-number {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            text-align: left;
+        }
+        
+        .icon {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        
+        .emphasis {
+            color: #ffd700;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Slide 1: Title -->
+    <div class="slide-container active">
+        <div class="slide-content">
+            <h1>📚 Marketing of Innovations</h1>
+            <div class="subtitle">MKTG 579E</div>
+            <div class="instructor-info">
+                <h3>Professor Yong Liu, PhD</h3>
+                <p>Professor of Marketing & HSLopez Family Endowed Chair<br>
+                Vice Dean of Programs and Strategic Initiatives<br>
+                Director, HSLopez School of Business Analytics</p>
+            </div>
+            <p style="font-size: 1.2em; margin-top: 30px;">Welcome to Your Innovation Journey!</p>
+        </div>
+    </div>
+
+    <!-- Slide 2: Course Philosophy -->
+    <div class="slide-container">
+        <div class="slide-content">
+            <h2>💡 Why Innovation Matters</h2>
+            <div class="quote">
+                "Because the purpose of business is to create a customer, the business enterprise has two–and only two–basic functions: marketing and innovation. Marketing and innovation produce results; all the rest are costs."
+                <div class="quote-author">— Peter F. Drucker</div>
+            </div>
+            <div class="highlight-box">
+                <p><strong>Innovation is the driving force of economic growth globally</strong></p>
+                <p>This course bridges the critical gap between innovation and marketing to help you create successful new products and ventures.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 3: Learning Outcomes -->
+    <div class="slide-container">
+        <div class="slide-content">
+            <h2>🎯 What You'll Master</h2>
+            <ul>
+                <li><strong>Analyze</strong> patterns and factors that drive innovation diffusion</li>
+                <li><strong>Develop</strong> skills to foster creativity for new products and innovations</li>
+                <li><strong>Learn</strong> how to evaluate market potential of new products</li>
+                <li><strong>Apply</strong> tools and methods for product design and development</li>
+                <li><strong>Experience</strong> the challenges of building disruptive innovations</li>
+                <li><strong>Master</strong> customer-focused innovation strategies</li>
+            </ul>
+            <div class="highlight-box">
+                <p class="emphasis">You'll tackle real-world business challenges throughout the course!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 4: Course Structure -->
+    <div class="slide-container">
+        <div class="slide-content">
+            <h2>📅 Course Structure</h2>
+            <div class="two-column">
+                <div>
+                    <h3>⏰ Timeline</h3>
+                    <ul>
+                        <li><strong>Duration:</strong> 7 weeks intensive</li>
+                        <li><strong>Workload:</strong> ~13 hours/week</li>
+                        <li><strong>Format:</strong> Online MBA course</li>
+                        <li><strong>Time Zone:</strong> Mountain Standard (Arizona)</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>📊 Weekly Breakdown</h3>
+                    <ul>
+                        <li>Readings: 3-4 hours</li>
+                        <li>Video Lectures: 4-5 hours</li>
+                        <li>Assignments: 3-5 hours</li>
+                        <li>Discussion: 2-3 hours</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="warning">
+                <strong>⚠️ Important:</strong> This is an intensive course! Stay current with all assignments and readings.
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 5: Reading Materials -->
+    <div class="slide-container">
+        <div class="slide-content">
+            <h2>📖 What We'll Study</h2>
+            <div class="two-column">
+                <div>
+                    <h3>Key Articles</h3>
+                    <ul>
+                        <li>Innovation Diffusion: Roger's Five Factors</li>
+                        <li>Why Consumers Don't Buy</li>
+                        <li>The Innovator's DNA</li>
+                        <li>Business Model Analysis</li>
+                        <li>Marketing Metrics</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Case Studies</h3>
+                    <ul>
+                        <li>Dropbox: "It Just Works"</li>
+                        <li>Zipcar: Refining the Business Model</li>
+                        <li>MedNet.com Competition</li>
+                        <li>Strategic Innovation Simulation</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="highlight-box">
+                <p><strong>📱 All materials provided electronically at no additional cost!</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 6: Assessment Overview -->
+    <div class="slide-container">
+        <div class="slide-content">
+            <h2>📊 How You'll Be Evaluated</h2>
+            <div class="grade-breakdown">
+                <div class="grade-item">
+                    <h3>👤 Individual Work (50%)</h3>
+                    <ul>
+                        <li>3 Individual Assignments: 240 pts (31%)</li>
+                        <li>3 Discussion Posts: 150 pts (19%)</li>
+                    </ul>
+                </div>
+                <div class="grade-item">
+                    <h3>👥 Group Work (42%)</h3>
+                    <ul>
+                        <li>4 Group Assignments: 320 pts (42%)</li>
+                        <li>Includes peer evaluation</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grade-item" style="margin-top: 20px;">
+                <h3>📝 Final Exam (8%)</h3>
+                <p>Take-home format covering key course concepts: 60 pts</p>
+            </div>
+            <div class="highlight-box">
+                <p><strong>Total: 770 points</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 7: AI Policy -->
+    <div class="slide-container">
+        <div class="slide-content">
+            <h2>🤖 Generative AI Policy</h2>
+            <div class="two-column">
+                <div style="background: rgba(40, 167, 69, 0.3); padding: 20px; border-radius: 10px;">
+                    <h3>✅ What's Allowed</h3>
+                    <ul>
+                        <li>Use ChatGPT, Bard, Bing for research assistance</li>
+                        <li>Help with individual and group assignments</li>
+                        <li>Must provide proper acknowledgment and citation</li>
+                        <li>Discuss with instructor if uncertain</li>
+                    </ul>
+                </div>
+                <div style="background: rgba(220, 53, 69, 0.3); padding: 20px; border-radius: 10px;">
+                    <h3>🚫 Zero Tolerance</h3>
+                    <ul>
+                        <li>Undeclared AI use</li>
+                        <li>Deceptive use of AI systems</li>
+                        <li>Submitting unverified AI content</li>
+                        <li>Academic dishonesty = Course grade of E</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="warning">
+                <strong>Remember:</strong> You're responsible for fact-checking all AI-generated content and finding reliable sources!
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 8: Group Work -->
+    <div class="slide-container">
+        <div class="slide-content">
+            <h2>👥 Teamwork & Collaboration</h2>
+            <div class="icon">🤝</div>
+            <div class="two-column">
+                <div>
+                    <h3>Group Assignments</h3>
+                    <ul>
+                        <li>4 group assignments total</li>
+                        <li>1 data/analysis assignment</li>
+                        <li>3 case analyses</li>
+                        <li>One member submits for the group</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Peer Evaluation</h3>
+                    <ul>
+                        <li>Equal contribution expected</li>
+                        <li>Can lose up to 100% of team points</li>
+                        <li>Based on peer feedback</li>
+                        <li>Instructor monitors progress</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="highlight-box">
+                <p><strong>Success Tip:</strong> Communicate regularly with your team and contribute meaningfully to all projects!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 9: Support & Resources -->
+    <div class="slide-container">
+        <div class="slide-content">
+            <h2>🆘 Getting Help & Support</h2>
+            <div class="two-column">
+                <div>
+                    <h3>📞 Office Hours</h3>
+                    <ul>
+                        <li>Virtual Zoom sessions</li>
+                        <li>4 sessions per week by appointment</li>
+                        <li>Email 2 days in advance</li>
+                        <li>Content questions: Use discussion forum</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>💻 Technical Support</h3>
+                    <ul>
+                        <li>Brightspace/D2L platform</li>
+                        <li>Library research support</li>
+                        <li>Student Resource Center</li>
+                        <li>Disability accommodations available</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="highlight-box">
+                <p><strong>Response Times:</strong> 24 hours Mon-Fri, 48 hours weekends</p>
+            </div>
+            <div class="warning">
+                <strong>No Late Assignments Accepted!</strong> Plan ahead for technical issues.
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 10: Success Tips -->
+    <div class="slide-container">
+        <div class="slide-content">
+            <h2>🚀 Keys to Success</h2>
+            <div class="icon">⭐</div>
+            <ul style="font-size: 1.2em; line-height: 1.8;">
+                <li><strong class="emphasis">Stay Current:</strong> Don't fall behind on readings and assignments</li>
+                <li><strong class="emphasis">Engage Actively:</strong> Participate meaningfully in discussions</li>
+                <li><strong class="emphasis">Collaborate Effectively:</strong> Be a reliable team member</li>
+                <li><strong class="emphasis">Apply Concepts:</strong> Connect theory to real-world situations</li>
+                <li><strong class="emphasis">Ask Questions:</strong> Use office hours and discussion forums</li>
+                <li><strong class="emphasis">Plan Ahead:</strong> No late submissions accepted</li>
+            </ul>
+            <div class="highlight-box" style="margin-top: 40px;">
+                <h3>🎯 Ready to Innovate?</h3>
+                <p style="font-size: 1.1em;">Let's create the next breakthrough product together!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="navigation">
+        <button class="nav-btn" onclick="previousSlide()">← Previous</button>
+        <button class="nav-btn" onclick="nextSlide()">Next →</button>
+    </div>
+
+    <!-- Slide Counter -->
+    <div class="slide-number">
+        <span id="current-slide">1</span> / <span id="total-slides">10</span>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide-container');
+        const totalSlides = slides.length;
+        document.getElementById('total-slides').textContent = totalSlides;
+
+        function showSlide(n) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (n + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
+            document.getElementById('current-slide').textContent = currentSlide + 1;
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function previousSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'ArrowRight' || event.key === ' ') {
+                nextSlide();
+            } else if (event.key === 'ArrowLeft') {
+                previousSlide();
+            }
+        });
+
+        // Auto-advance option (uncomment to enable)
+        // setInterval(nextSlide, 10000); // Auto-advance every 10 seconds
+    </script>
+</body>
+</html>
